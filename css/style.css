@@ -1,0 +1,90 @@
+img{
+    width: 15%;
+    display: inline;
+}
+
+h1{
+    display: inline;
+    vertical-align: middle;
+    
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif
+}
+
+button{
+    padding: 1px 30px;
+    border-radius: 10px !important;
+    border: 3px solid lightgrey;
+    display: inline-block;
+    
+    
+}
+
+#levels{
+    display: inline-block;
+}
+
+.small_container{
+    max-width: 900px;
+    background-color: hsl(160deg 100% 75%);
+}
+
+#grid{
+    width: 900px;
+    height: 900px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main{
+    background-color: hsl(160deg 100% 75%);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.square.active{
+    background-color: blue;
+}
+
+
+.square{
+    border: 1px solid black;
+}
+
+p{
+    padding-right: 10px;
+    position: relative;
+    top: 3px;
+    font-size: 18px;
+}
+
+.square{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    cursor: crosshair;
+    line-height: 90px;
+    text-align: center;
+}
+
+.square.medium-square{
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    line-height: 100px;
+    text-align: center;
+}
+
+
+.square.big-square{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    text-align: center;
+    line-height: 120px;
+}
+
+.square.square-red.active{
+    background-color: red;
+}
