@@ -56,10 +56,13 @@ function generateGrid(grid, difficoltà) {
     // imposto i vari gradi di difficoltà
     if(difficoltà == 1){
         gridDimension = 100;
+        
     } else if(difficoltà == 2){
         gridDimension = 81;
+        
     } else{
         gridDimension = 49;
+        
     }
         
         
@@ -79,8 +82,10 @@ function generateGrid(grid, difficoltà) {
         // modifico le dimensioni delle celle
         if(difficoltà == 2){
             squareEl.classList.add("medium-square");
+            
         } else if(difficoltà == 3){
             squareEl.classList.add("big-square");
+            
         } 
             
         // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
@@ -89,6 +94,19 @@ function generateGrid(grid, difficoltà) {
             function() {
                 console.log(this.innerHTML);
                 this.classList.toggle("active");
+            }
+        )
+
+
+        squareEl.addEventListener(
+            "click",
+            function(){
+                if(numeriDiversi.includes(i)){
+                    squareEl.style.backgroundColor = "red";
+                    window.alert("Game Over! Hai trovato una Bomba.")
+                } else{
+                    console.log(`hai trovato il numero ${i}`);
+                }
             }
         )
         // lo aggiungo alla griglia
@@ -101,7 +119,7 @@ function generateGrid(grid, difficoltà) {
                 
                 
     }
-    const numeriDiversi = [];
+    let numeriDiversi = [];
     while (numeriDiversi.length < 16){
         randomNumber = Math.floor(Math.random() * 100) + 1;
     
